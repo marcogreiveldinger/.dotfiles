@@ -8,5 +8,10 @@ export ZSH=$HOME/.zsh
 ### ---- Source plugins -----------------------------------
 [[ -f $ZSH/plugins/plugins.zsh ]] && source $ZSH/plugins/plugins.zsh
 
+### ---- autocompletion with selectable menu -----------------------------------
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
 # Load Starship
 eval "$(starship init zsh)"

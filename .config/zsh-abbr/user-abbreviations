@@ -1,0 +1,3 @@
+abbr "grep"="grep --color"
+abbr "gst"="git status"
+abbr "yst"="yadm status"
