@@ -1,5 +1,7 @@
 [init]
 	defaultBranch = main
+[core]
+	excludesfile = ~/.gitignore_global	
 [user]
 	name = Marco Greiveldinger
 	email = 43136849+marcogreiveldinger@users.noreply.github.com

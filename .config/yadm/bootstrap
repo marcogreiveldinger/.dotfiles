@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#
+# Bootstrap script for setting up a new OSX machine
+#
+# This should be idempotent so it can be run multiple times.
+#
+
+# requires xcode and tools!
+xcode-select -p || {
+    echo_error "XCode must be installed! (run xcode-select --install)"
+    exit 1
+}
+
+# update your computer
+if ask "Perform latest apple update?" N; then
+    echo_warn "Updating to latest apple software"
+    sudo softwareupdate -i -a
+else
+    echo_ok "Skipping apple update"
+fi
+
+# homebrew
+if command_exists brew; then
+    echo_ok "Homebrew already installed. Getting updates..."
+    brew update
+    brew doctor
+else
+    echo_error 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
+    exit 1
+fi
+
+# done
+echo_ok "Bootstrapping complete"

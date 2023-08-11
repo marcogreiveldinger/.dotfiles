@@ -1,0 +1,32 @@
+# Blacklist files/folders in same directory as the .gitignore file
+/*
+
+
+# Lists all non-ignored files in the dotfiles directory
+# Generate this list with `yadm list -a | pbcopy`
+
+!.config/
+# ignore subpaths of config directory (this pattern repeats for all subpaths)
+.config/*
+!.config/yadm/
+!.config/yadm/*
+!.gitconfig
+!.gitignore
+!.gitmodules
+.gnupg/*
+!.gnupg/gpg-agent.conf
+!.gnupg/gpg.conf
+!.vimrc
+!.zsh/.zprofile
+!.zsh/.zshrc
+!.zsh/config/aliases.zsh
+!.zsh/config/history.zsh
+!.zsh/plugins/fast-syntax-highlighting
+!.zsh/plugins/fzf/.fzf.zsh
+!.zsh/plugins/fzf/README.md
+!.zsh/plugins/zsh-abbr
+!.zsh/plugins/zsh-autosuggestions
+!.zsh/plugins/zsh-z
+!.zshenv
+!LICENSE
+!README.md
