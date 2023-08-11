@@ -20,7 +20,7 @@ zstyle ':completion:*' list-colors '' # colorize completion lists
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01' # colorize kill list
 
 ### ---- Load fzf completions and keybindings -----------------------------------
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $ZSH/plugins/fzf/.fzf.zsh ] && source $ZSH/plugins/fzf/.fzf.zsh
 
 ### ---- Load Starship -----------------------------------
 eval "$(starship init zsh)"
