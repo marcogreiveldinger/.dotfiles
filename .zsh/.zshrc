@@ -22,5 +22,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 ### ---- Load fzf completions and keybindings -----------------------------------
 [ -f $ZSH/plugins/fzf/.fzf.zsh ] && source $ZSH/plugins/fzf/.fzf.zsh
 
+### ---- gpg agent config with pinentry-mac ---------
+export GPG_TTY=$(tty) # based on this guide https://gist.github.com/troyfontaine/18c9146295168ee9ca2b30c00bd1b41e
+
 ### ---- Load Starship -----------------------------------
 eval "$(starship init zsh)"

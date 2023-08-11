@@ -1,0 +1,10 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Marco Greiveldinger
+	email = 43136849+marcogreiveldinger@users.noreply.github.com
+	signingkey = 1667AF2B
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[commit]
+	gpgsign = true
