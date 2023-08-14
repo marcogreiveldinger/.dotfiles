@@ -9,6 +9,7 @@
 # ignore subpaths of config directory (this pattern repeats for all subpaths)
 !Brewfile
 .config/*
+!.config/starship.toml
 !.config/yadm/
 !.config/yadm/*
 !.config/zsh-abbr/

@@ -26,11 +26,14 @@ if command_exists brew; then
     brew doctor
 else
     echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
-    exit 1
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo ">>> Installing brew packages.."
 brew bundle install --file ~/Brewfile
+
+# sdkman
+curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
 
 # done
