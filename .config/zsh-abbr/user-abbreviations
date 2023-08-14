@@ -1,3 +1,4 @@
 abbr -g "grep"="grep --color"
 abbr "gst"="git status"
 abbr "yst"="yadm status"
+abbr "gcl"="git clone"

@@ -7,9 +7,12 @@
 
 !.config/
 # ignore subpaths of config directory (this pattern repeats for all subpaths)
+!Brewfile
 .config/*
 !.config/yadm/
 !.config/yadm/*
+!.config/zsh-abbr/
+!.config/zsh-abbr/*
 !.gitconfig
 !.gitignore
 !.gitmodules
@@ -17,13 +20,16 @@
 !.gnupg/gpg-agent.conf
 !.gnupg/gpg.conf
 !.vimrc
+!.zsh/
+.zsh/*
 !.zsh/.zprofile
 !.zsh/.zshrc
 !.zsh/config/aliases.zsh
 !.zsh/config/history.zsh
+.zsh/plugins/*
 !.zsh/plugins/fast-syntax-highlighting
-!.zsh/plugins/fzf/.fzf.zsh
-!.zsh/plugins/fzf/README.md
+!.zsh/plugins/fzf/
+!.zsh/plugins/goto/
 !.zsh/plugins/zsh-abbr
 !.zsh/plugins/zsh-autosuggestions
 !.zsh/plugins/zsh-z

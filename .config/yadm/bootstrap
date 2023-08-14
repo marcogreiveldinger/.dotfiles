@@ -16,18 +16,22 @@ if ask "Perform latest apple update?" N; then
     echo_warn "Updating to latest apple software"
     sudo softwareupdate -i -a
 else
-    echo_ok "Skipping apple update"
+    echo "Skipping apple update"
 fi
 
 # homebrew
 if command_exists brew; then
-    echo_ok "Homebrew already installed. Getting updates..."
+    echo "Homebrew already installed. Getting updates..."
     brew update
     brew doctor
 else
-    echo_error 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
+    echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
     exit 1
 fi
 
+echo ">>> Installing brew packages.."
+brew bundle install --file ~/Brewfile
+
+
 # done
-echo_ok "Bootstrapping complete"
+echo "Bootstrapping complete"
