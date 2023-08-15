@@ -39,6 +39,8 @@ echo ">>> Installing brew packages.."
 # sdkman
 curl -s "https://get.sdkman.io?rcupdate=false" | bash
 
+# link tabby config
+ln -s ~/.config/tabby/config.yaml ~/Library/Application\ Support/tabby/config.yaml
 
 # done
 echo "Bootstrapping complete"
