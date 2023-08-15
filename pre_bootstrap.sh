@@ -4,12 +4,15 @@
 if ! command -v brew &> /dev/null
 then
     echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  &
 else
     echo "Homebrew already installed. Getting updates..."
     brew update
     brew doctor
 fi
+
+# Wait for Homebrew installation to complete
+wait
 
 # Create directory if it doesn't exist
 mkdir -p ~/.local/bin
@@ -21,7 +24,7 @@ curl -sfLo ~/.local/bin/yadm https://github.com/TheLocehiliosan/yadm/raw/master/
 chmod a+x ~/.local/bin/yadm
 
 # Clone dotfiles repository
-~/.local/bin/yadm clone --bootstrap -f https://github.com/marcogreiveldinger/.dotfiles.git
+~/.local/bin/yadm clone --bootstrap -f https://github.com/mg/.dotfiles.git
 
 # Run yadm bootstrap
 ~/.local/bin/yadm bootstrap
