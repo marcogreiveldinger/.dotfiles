@@ -4,12 +4,12 @@
 [submodule ".zsh/plugins/zsh-autosuggestions"]
 	path = .zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "/Users/marco/.zsh/plugins/zsh-z"]
-	path = /Users/marco/.zsh/plugins/zsh-z
+[submodule ".zsh/plugins/zsh-z"]
+	path = .zsh/plugins/zsh-z
 	url = https://github.com/agkozak/zsh-z
-[submodule "/Users/marco/.zsh/plugins/zsh-abbr"]
-	path = /Users/marco/.zsh/plugins/zsh-abbr
+[submodule ".zsh/plugins/zsh-abbr"]
+	path = .zsh/plugins/zsh-abbr
 	url = https://github.com/olets/zsh-abbr
-[submodule "/Users/marco/.zsh/plugins/goto"]
-	path = /Users/marco/.zsh/plugins/goto
+[submodule ".zsh/plugins/goto"]
+	path = .zsh/plugins/goto
 	url = https://github.com/iridakos/goto
