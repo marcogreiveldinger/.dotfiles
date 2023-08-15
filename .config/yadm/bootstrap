@@ -10,7 +10,7 @@
 cd "$HOME"
 
 echo "Init submodules"
-yadm submodule update --recursive --init
+~/.local/bin/yadm submodule update --recursive --init
 
 
 # requires xcode and tools!
@@ -23,13 +23,13 @@ else
 fi
 
 # homebrew
-if ! command -v brew &> /dev/null
+if ! command -v /opt/homebrew/bin/brew &> /dev/null
 then
     echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
 else
     echo "Homebrew already installed. Getting updates..."
-    brew update
-    brew doctor
+    /opt/homebrew/bin/brew update
+    /opt/homebrew/bin/brew doctor
 fi
 
 
