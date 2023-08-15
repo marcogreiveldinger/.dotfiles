@@ -8,6 +8,7 @@
 !.config/
 # ignore subpaths of config directory (this pattern repeats for all subpaths)
 !Brewfile
+!pre_bootstrap.sh
 .config/*
 !.config/starship.toml
 !.config/yadm/
