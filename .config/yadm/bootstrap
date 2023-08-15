@@ -14,16 +14,6 @@ else
     echo "Xcode already installed"
 fi
 
-
-# update your computer
-if ask "Perform latest apple update?" N; then
-    echo_warn "Updating to latest apple software"
-    sudo softwareupdate -i -a
-else
-    echo "Skipping apple update"
-fi
-
-
 # homebrew
 if ! command -v brew &> /dev/null
 then
