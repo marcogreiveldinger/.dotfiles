@@ -194,6 +194,7 @@ terminal:
   copyOnSelect: true
   warnOnMultilinePaste: false
   fontSize: 15
+  profile: local:binzsh
 ssh: {}
 configSync:
   parts: {}
@@ -207,6 +208,10 @@ pluginBlacklist: []
 profileDefaults:
   ssh:
     disableDynamicTitle: true
+  local:
+    type: local
+    options:
+      env: {}
 providerBlacklist: []
 commandBlacklist: []
 enableAnalytics: false
