@@ -1,9 +1,17 @@
-#!/usr/bin/env bash
+#!/bin/sh
 #
 # Bootstrap script for setting up a new OSX machine
 #
 # This should be idempotent so it can be run multiple times.
 #
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
 
 # requires xcode and tools!
 if ! command -v xcode-select -p &> /dev/null
