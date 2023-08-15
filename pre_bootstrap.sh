@@ -10,7 +10,7 @@ curl -sfLo ~/.local/bin/yadm https://github.com/TheLocehiliosan/yadm/raw/master/
 chmod a+x ~/.local/bin/yadm
 
 # Clone dotfiles repository
-~/.local/bin/yadm clone --bootstrap -f https://github.com/mg/.dotfiles.git
+~/.local/bin/yadm clone --bootstrap -f https://github.com/marcogreiveldinger/.dotfiles.git
 
 # Run yadm bootstrap
 ~/.local/bin/yadm bootstrap
