@@ -1,19 +1,5 @@
 #!/bin/sh
 
-# install homebrew first as it installs xcode as well to use git!
-if ! command -v brew &> /dev/null
-then
-    echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"  &
-else
-    echo "Homebrew already installed. Getting updates..."
-    brew update
-    brew doctor
-fi
-
-# Wait for Homebrew installation to complete
-wait
-
 # Create directory if it doesn't exist
 mkdir -p ~/.local/bin
 
