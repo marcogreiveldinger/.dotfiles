@@ -1,40 +1,46 @@
-# Blacklist files/folders in same directory as the .gitignore file
-/*
+########### WIP ############
+# not working as expected yet!
+
+# # Blacklist files/folders in same directory as the .gitignore file
+# /*
 
 
-# Lists all non-ignored files in the dotfiles directory
-# Generate this list with `yadm list -a | pbcopy`
+# # Lists all non-ignored files in the dotfiles directory
+# # Generate this list with `yadm list -a | pbcopy`
 
-!.config/
-# ignore subpaths of config directory (this pattern repeats for all subpaths)
-!Brewfile
-!pre_bootstrap.sh
-.config/*
-!.config/starship.toml
-!.config/yadm/
-!.config/yadm/*
-!.config/zsh-abbr/
-!.config/zsh-abbr/*
-!.gitconfig
-!.gitignore
-!.gitmodules
-.gnupg/*
-!.gnupg/gpg-agent.conf
-!.gnupg/gpg.conf
-!.vimrc
-!.zsh/
-.zsh/*
-!.zsh/.zprofile
-!.zsh/.zshrc
-!.zsh/config/aliases.zsh
-!.zsh/config/history.zsh
-.zsh/plugins/*
-!.zsh/plugins/fast-syntax-highlighting
-!.zsh/plugins/fzf/
-!.zsh/plugins/goto/
-!.zsh/plugins/zsh-abbr
-!.zsh/plugins/zsh-autosuggestions
-!.zsh/plugins/zsh-z
-!.zshenv
-!LICENSE
-!README.md
+# !.config/
+# # ignore subpaths of config directory (this pattern repeats for all subpaths)
+# !Brewfile
+# !pre_bootstrap.sh
+# .config/*
+# !.config/starship.toml
+# !.config/yadm/
+# !.config/yadm/*
+# !.config/zsh-abbr/
+# !.config/zsh-abbr/*
+# !.gitconfig
+# !.gitignore
+# !.gitmodules
+# .gnupg/*
+# !.gnupg/gpg-agent.conf
+# !.gnupg/gpg.conf
+# !.vimrc
+# !.zsh/
+# .zsh/*
+# !.zsh/.zprofile
+# !.zsh/.zshrc
+# !.zsh/config/aliases.zsh
+# !.zsh/config/history.zsh
+# .zsh/plugins/*
+# .zsh/plugins/
+# !.zsh/plugins/fast-syntax-highlighting
+# !.zsh/plugins/fzf/
+# .zsh/plugins/goto
+# !.zsh/plugins/goto/
+# !.zsh/plugins/goto/*
+# !.zsh/plugins/zsh-abbr
+# !.zsh/plugins/zsh-autosuggestions
+# !.zsh/plugins/zsh-z
+# !.zshenv
+# !LICENSE
+# !README.md
