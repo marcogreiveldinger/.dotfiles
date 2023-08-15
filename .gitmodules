@@ -10,6 +10,3 @@
 [submodule "/Users/marco/.zsh/plugins/zsh-abbr"]
 	path = /Users/marco/.zsh/plugins/zsh-abbr
 	url = https://github.com/olets/zsh-abbr
-[submodule "/Users/marco/.zsh/plugins/goto"]
-	path = /Users/marco/.zsh/plugins/goto
-	url = https://github.com/iridakos/goto
