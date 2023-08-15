@@ -34,7 +34,7 @@ fi
 
 
 echo ">>> Installing brew packages.."
-brew bundle install --file ~/Brewfile
+/opt/homebrew/bin/brew bundle install --file ~/Brewfile
 
 # sdkman
 curl -s "https://get.sdkman.io?rcupdate=false" | bash
