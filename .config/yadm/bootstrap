@@ -6,10 +6,14 @@
 #
 
 # requires xcode and tools!
-xcode-select -p || {
-    echo_error "XCode must be installed! (run xcode-select --install)"
-    exit 1
-}
+if ! command -v xcode-select -p &> /dev/null
+then
+    echo "XCode must be installed! (run xcode-select --install)"
+    xcode-select --install
+else
+    echo "Xcode already installed"
+fi
+
 
 # update your computer
 if ask "Perform latest apple update?" N; then
@@ -19,14 +23,16 @@ else
     echo "Skipping apple update"
 fi
 
+
 # homebrew
-if command_exists brew; then
+if ! command -v brew &> /dev/null
+then
+    echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+else
     echo "Homebrew already installed. Getting updates..."
     brew update
     brew doctor
-else
-    echo 'brew must be installed! (/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)")'
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 echo ">>> Installing brew packages.."
