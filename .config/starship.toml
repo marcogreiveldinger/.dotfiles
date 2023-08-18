@@ -2,12 +2,23 @@
 
 add_newline = false
 command_timeout = 1000
-format = """$os$hostname$kubernetes$directory$git_branch$git_status"""
 
-# Drop ugly default prompt characters
+format = '''
+$character$os$hostname$directory$git_branch$git_status $python$time $cmd_duration
+[└─>](bold green) '''
+
 [character]
-success_symbol = ''
-error_symbol = ''
+success_symbol = "🚀 "
+error_symbol = "🔥 "
+
+[time]
+disabled = false
+time_format = "%r" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'
+
+[cmd_duration]
+format = 'last command: [$duration](bold yellow)'
 
 # ---
 
@@ -57,11 +68,6 @@ staged = '[++\($count\)](green)'
 renamed = '襁 '
 deleted = ' '
 
-# Shows kubernetes context and namespace
-[kubernetes]
-format = 'via [󱃾 $context\($namespace\)](bold purple) '
-disabled = false
-
 # ---
 
 [vagrant]
@@ -74,7 +80,8 @@ disabled = true
 disabled = true
 
 [python]
-disabled = true
+symbol = '🐍 '
+pyenv_version_name = true
 
 [nodejs]
 disabled = true
