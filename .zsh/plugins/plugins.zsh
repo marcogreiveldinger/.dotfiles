@@ -22,6 +22,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 
 #### ---- zsh-z ------------------------
 [ -f $ZSH/plugins/zsh-z/zsh-z.plugin.zsh ] && source $ZSH/plugins/zsh-z/zsh-z.plugin.zsh
+autoload -U compinit; compinit # source after zsh-z again for autocompletion to work
 
 #### ---- zsh-abbr ------------------------
 [ -f $ZSH/plugins/zsh-abbr/zsh-abbr.zsh ] && source $ZSH/plugins/zsh-abbr/zsh-abbr.zsh
