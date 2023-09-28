@@ -1,4 +1,4 @@
-version: 3
+version: 6
 profiles: []
 hotkeys:
   toggle-window: []
@@ -163,6 +163,7 @@ hotkeys:
   command-selector:
     - ⌘-Shift-P
   reconnect-tab: []
+  disconnect-tab: []
 terminal:
   searchOptions: {}
   colorScheme:
@@ -215,3 +216,5 @@ profileDefaults:
 providerBlacklist: []
 commandBlacklist: []
 enableAnalytics: false
+groups: []
+profileBlacklist: []
