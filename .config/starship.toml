@@ -7,6 +7,8 @@ format = '''
 $character$os$hostname$directory$git_branch$git_status $python$time $cmd_duration
 [└─>](bold green) '''
 
+continuation_prompt = '▶▶ '
+
 [character]
 success_symbol = "🚀 "
 error_symbol = "🔥 "
@@ -34,6 +36,7 @@ Macos = '󰀵'
 ssh_only = false
 format = 'on [$hostname](bold yellow) '
 disabled = false
+ssh_symbol = " "
 
 # Shows current directory
 [directory]
@@ -46,7 +49,7 @@ format = 'at [$path]($style)[$read_only]($read_only_style) '
 
 # Shows current git branch
 [git_branch]
-symbol = ' '
+symbol = " "
 format = 'via [$symbol$branch]($style)'
 # truncation_length = 4
 truncation_symbol = '…/'
@@ -68,26 +71,60 @@ staged = '[++\($count\)](green)'
 renamed = '襁 '
 deleted = ' '
 
+
 # ---
 
-[vagrant]
-disabled = true
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
 
 [docker_context]
-disabled = true
+symbol = " "
 
-[helm]
-disabled = true
+[golang]
+symbol = " "
 
-[python]
-symbol = '🐍 '
-pyenv_version_name = true
+[java]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
 
 [nodejs]
-disabled = true
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+pyenv_version_name = true
 
 [ruby]
-disabled = true
+symbol = " "
 
-[terraform]
-disabled = true
+[rlang]
+symbol = "󰟔 "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "
