@@ -3,9 +3,32 @@
 add_newline = false
 command_timeout = 1000
 
-format = '''
-$character$os$hostname$directory$git_branch$git_status $python$time $cmd_duration
-[└─>](bold green) '''
+format = """
+$character\
+$os$hostname\
+$directory\
+$git_branch\
+$git_status \
+$python\
+$aws\
+$golang\
+$java\
+$nodejs\
+$rust\
+$ruby\
+$scala\
+$dart\
+$conda\
+$pijul_channel\
+$lua\
+$rlang\
+$package\
+$buf\
+$memory_usage\
+$docker_context\
+[](#1C3A5E)$time[ ](#1C3A5E)$cmd_duration
+[└─>](bold green) """
+
 
 continuation_prompt = '▶▶ '
 
@@ -103,6 +126,10 @@ symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
+disabled = true
+style='bold dimmed white'
+threshold = 1
+format = "$symbol [${ram}(|${swap})]($style) "
 
 [nodejs]
 symbol = " "
