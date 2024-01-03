@@ -14,3 +14,9 @@ To install yadm temporarily, then clone the .dotfiles repo and bootstrap the sys
 ```bash
 curl -sL https://github.com/marcogreiveldinger/.dotfiles/raw/main/pre_bootstrap.sh | bash
 ```
+
+
+### Update plugins with submodules
+```bash
+yadm submodule update --remote
+```
