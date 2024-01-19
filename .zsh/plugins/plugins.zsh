@@ -32,3 +32,6 @@ autoload -U compinit; compinit # source after zsh-z again for autocompletion to 
 
 ### ---- Load goto script with autocompletion -----------------------------------
 [ -f $ZSH/plugins/goto/goto.sh ] && source $ZSH/plugins/goto/goto.sh
+
+### ---- Load git open script -----------------------------------
+[ -f $ZSH/plugins/git-open/git-open.plugin.zsh ] && source $ZSH/plugins/git-open/git-open.plugin.zsh

@@ -13,3 +13,6 @@
 [submodule ".zsh/plugins/goto"]
 	path = .zsh/plugins/goto
 	url = https://github.com/iridakos/goto
+[submodule ".zsh/plugins/git-open"]
+	path = .zsh/plugins/git-open
+	url = https://github.com/paulirish/git-open.git
