@@ -5,5 +5,5 @@
 # alias yst="yadm status"
 # alias grep='grep --color'
 
-alias ls="exa --icons --group-directories-first -l"
-alias ll="exa --icons --group-directories-first -la"
+alias ls="eza --icons --group-directories-first -l"
+alias ll="eza --icons --group-directories-first -la"
