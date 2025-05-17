@@ -25,7 +25,17 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=60'
 autoload -U compinit; compinit # source after zsh-z again for autocompletion to work
 
 #### ---- zsh-abbr ------------------------
-[ -f $ZSH/plugins/zsh-abbr/zsh-abbr.zsh ] && source $ZSH/plugins/zsh-abbr/zsh-abbr.zsh
+#[ -f $ZSH/plugins/zsh-abbr/zsh-abbr.zsh ] && source $ZSH/plugins/zsh-abbr/zsh-abbr.zsh
+[ -f /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh ] && source /opt/homebrew/share/zsh-abbr/zsh-abbr.zsh
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-abbr:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+chmod go-w '/opt/homebrew/share'
+chmod -R go-w '/opt/homebrew/share/zsh'
+rm -f ~/.zcompdump; compinit
 
 ### ---- Load fzf completions and keybindings -----------------------------------
 [ -f $ZSH/plugins/fzf/.fzf.zsh ] && source $ZSH/plugins/fzf/.fzf.zsh
