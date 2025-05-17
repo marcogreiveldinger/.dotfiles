@@ -16,3 +16,6 @@
 [submodule ".zsh/plugins/git-open"]
 	path = .zsh/plugins/git-open
 	url = https://github.com/paulirish/git-open.git
+[submodule ".zsh/plugins/zsh-nvm"]
+	path = .zsh/plugins/zsh-nvm
+	url = https://github.com/lukechilds/zsh-nvm.git

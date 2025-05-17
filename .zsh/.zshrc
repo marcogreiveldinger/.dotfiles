@@ -17,6 +17,9 @@ export WORDCHARS=${WORDCHARS//[\/]} # remove / from wordchars so that / is a sep
 [[ -f $ZSH/config/history.zsh ]] && source $ZSH/config/history.zsh
 [[ -f $ZSH/config/aliases.zsh ]] && source $ZSH/config/aliases.zsh
 
+### ---- lazy load nvm -----------------------------------
+export NVM_LAZY_LOAD=true
+
 ### ---- Source plugins -----------------------------------
 [[ -f $ZSH/plugins/plugins.zsh ]] && source $ZSH/plugins/plugins.zsh
 
@@ -30,6 +33,7 @@ eval "$(pyenv init -)"
 
 ### add local bin to path
 export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 ### ---- load sdkman ---------
 export SDKMAN_DIR="$HOME/.sdkman"

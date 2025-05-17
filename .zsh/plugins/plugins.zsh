@@ -35,3 +35,6 @@ autoload -U compinit; compinit # source after zsh-z again for autocompletion to 
 
 ### ---- Load git open script -----------------------------------
 [ -f $ZSH/plugins/git-open/git-open.plugin.zsh ] && source $ZSH/plugins/git-open/git-open.plugin.zsh
+
+### ---- Load zsh-nvm  -----------------------------------
+[ -f $ZSH/plugins/zsh-nvm/zsh-nvm.plugin.zsh ] && source $ZSH/plugins/zsh-nvm/zsh-nvm.plugin.zsh
